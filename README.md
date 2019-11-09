@@ -24,6 +24,7 @@ barely only usable for myself.
 Managing fixtures and running tests:
 
 ```sh
+$ nix-shell dev.nix
 $ python -m fixtures update-all
 $ python -m fixtures add --file-id <file_id> --name <basename>
 $ python -m pytest tests.py
