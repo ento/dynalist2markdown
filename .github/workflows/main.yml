@@ -1,0 +1,12 @@
+on:
+  pull_request:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: cachix/install-nix-action@v3
+    - run: |
+        nix-shell dev.nix --run "python -m pytest tests.py"
+        nix-shell dev.nix --run "flake8"
