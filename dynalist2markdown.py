@@ -3,7 +3,6 @@ from typing import TextIO
 import os
 import sys
 import argparse
-import itertools
 import json
 import textwrap
 import dataclasses
